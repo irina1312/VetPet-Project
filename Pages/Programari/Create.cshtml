@@ -1,0 +1,49 @@
+﻿@page
+@model VetPet.Pages.Programari.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Programare</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Programare.Nume_pacient" class="control-label"></label>
+                <input asp-for="Programare.Nume_pacient" class="form-control" />
+                <span asp-validation-for="Programare.Nume_pacient" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Programare.Nume_insotitor" class="control-label"></label>
+                <input asp-for="Programare.Nume_insotitor" class="form-control" />
+                <span asp-validation-for="Programare.Nume_insotitor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Programare.Nume_doctor" class="control-label"></label>
+                <input asp-for="Programare.Nume_doctor" class="form-control" />
+                <span asp-validation-for="Programare.Nume_doctor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Programare.Data_programarii" class="control-label"></label>
+                <input asp-for="Programare.Data_programarii" class="form-control" />
+                <span asp-validation-for="Programare.Data_programarii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
